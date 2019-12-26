@@ -1,6 +1,5 @@
 package guru.springframework.di.services;
 
-import guru.springframework.di.services.HelloWorldService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
@@ -10,7 +9,7 @@ import org.springframework.stereotype.Component;
  * at 6:23 PM
  */
 @Component
-@Profile("english")
+@Profile( {"english", "default"})
 public class HelloWorldServiceEnglishImpl implements HelloWorldService {
     @Override
     public String getGreetings() {
