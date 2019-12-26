@@ -1,3 +1,6 @@
+
+20 Spring Java Configuration Classes - start
+
 19 Component Scan - end
 19 Component Scan - start
 
