@@ -1,4 +1,5 @@
 
+21 Using Factory Beans - end
 21 Using Factory Beans - start
 
 20 Spring Java Configuration Classes - end
