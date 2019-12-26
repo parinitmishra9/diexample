@@ -1,3 +1,5 @@
+19 Component Scan - start
+
 17 Using Default Profiles - end
 17 Using Default Profiles - start
 
