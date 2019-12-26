@@ -1,3 +1,5 @@
+24 Spring XML Configuration With Spring - start
+
 22 Advanced Autowire Options in Spring - end
 22 Advanced Autowire Options in Spring - start
 
