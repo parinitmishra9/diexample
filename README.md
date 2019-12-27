@@ -1,3 +1,4 @@
+25 Creating Spring Beans in XML - end
 25 Creating Spring Beans in XML - start
 
 24 Spring XML Configuration With Spring - end

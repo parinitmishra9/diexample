@@ -4,6 +4,48 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
-
+    <!--  Component Scan  -->
     <context:component-scan base-package="guru.springframework" />
+
+    <!--  Bean  -->
+    <bean id="greetingController" class="guru.springframework.di.controllers.GreetingController" >
+        <property name="helloWorldService" ref="helloWorldServiceDefault" />
+        <property name="helloWorldServiceFrench" ref="french" />
+        <property name="helloWorldServiceGerman" ref="helloWorldServiceGerman" />
+    </bean>
+
+    <bean id="helloWorldFactory" class="guru.springframework.di.services.HelloWorldFactory" />
+
+    <!--  for French Bean  -->
+    <bean id="french" factory-bean="helloWorldFactory" factory-method="createHelloWorldService" >
+        <constructor-arg value="fr"/>
+    </bean>
+    <!--  for German Bean  -->
+    <bean id="helloWorldServiceGerman" factory-bean="helloWorldFactory" factory-method="createHelloWorldService" >
+        <constructor-arg value="de"/>
+    </bean>
+
+    <!--  for Polish Bean  -->
+    <bean id="helloWorldServicePolish" factory-bean="helloWorldFactory" factory-method="createHelloWorldService" >
+        <constructor-arg value="pl"/>
+    </bean>
+
+    <!--  for Russian Bean  -->
+    <bean id="helloWorldServiceRussian" factory-bean="helloWorldFactory" factory-method="createHelloWorldService" >
+        <constructor-arg value="ru"/>
+    </bean>
+
+    <!--  For Profile  -->
+    <beans profile="english" >
+        <bean id="helloWorldServiceDefault" factory-bean="helloWorldFactory" factory-method="createHelloWorldService" primary="true" >
+            <constructor-arg value="en"/>
+        </bean>
+    </beans>
+
+    <beans profile="spanish" >
+        <bean id="helloWorldServiceDefault" factory-bean="helloWorldFactory" factory-method="createHelloWorldService" primary="true" >
+            <constructor-arg value="es"/>
+        </bean>
+    </beans>
+
 </beans>
