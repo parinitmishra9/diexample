@@ -1,3 +1,5 @@
+26 Importing XML Configuration Files - start
+
 25 Creating Spring Beans in XML - end
 25 Creating Spring Beans in XML - start
 
