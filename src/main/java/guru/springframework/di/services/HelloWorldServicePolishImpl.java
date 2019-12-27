@@ -7,7 +7,7 @@ package guru.springframework.di.services;
  */
 public class HelloWorldServicePolishImpl implements HelloWorldService {
     @Override
-    public String getGreetings() {
+    public String getGreeting() {
         return "Witaj świecie";
     }
 }

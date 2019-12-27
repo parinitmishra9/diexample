@@ -6,5 +6,5 @@ package guru.springframework.di.services;
  * at 6:22 PM
  */
 public interface HelloWorldService {
-    public String getGreetings();
+    public String getGreeting();
 }
